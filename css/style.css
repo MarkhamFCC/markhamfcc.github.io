@@ -70,11 +70,11 @@ img:hover {
 a {
   border-bottom: 2px solid white;
   cursor: pointer;
-  color: white;
+  color: #444;
 }
 a:hover {
   opacity: 0.75;
-  color: white;
+  color: #f22;
 }
 a.userNames {
   border-bottom: 0px solid black;
