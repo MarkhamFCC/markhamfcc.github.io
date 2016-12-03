@@ -17,13 +17,14 @@
     -ms-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
+    z-index: 9999;
 }
 #return-to-top i {
     color: #fff;
     margin: 0;
     position: relative;
-    left: 16px;
-    top: 13px;
+    left: 5px;
+    top: 5px;
     font-size: 19px;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
