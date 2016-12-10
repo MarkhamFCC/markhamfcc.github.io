@@ -29,7 +29,7 @@ angular.module( "fccuserlistApp", [ "ngCookies", "ngResource", "ngSanitize", "ng
 				c.authenticate( b )
 					.then( a.getMe )
 			}, a.getMe = function( c ) {
-				b.get( "/auth/github/me" )
+				b.get( "https://fcctop100.herokuapp.com/auth/github/me" )
 					.success( function( b ) {
 						a.me = b
 					} )
