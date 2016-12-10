@@ -1,0 +1,219 @@
+body {
+	background-color: #457E86;
+	color: #f5f5f5;
+	font-family: 'Lato', sans-serif;
+}
+.header, .footer {
+    background-color:#381F0B;
+    color: #eeeeee;
+    height: 50px;
+    width: 100%;
+}
+.small-link {
+    padding: 5px;
+    border-radius: 4px;
+    margin-left: 25px;
+    border: 1px solid #ffac33;
+    font-size: 16px;
+    color: #ffac33;
+    background-color: rgba(255,172,51,0.2);
+    right: 25px;
+    float: right;
+    top: 5px;
+    position: absolute;
+}
+a.small-link:hover {
+    color: #ffac33;
+}
+.header {
+	margin-bottom: 30px;
+}
+.footer {
+	margin-top: 30px;
+   text-align: center;
+}
+.header .fcclogo {
+    margin-top: 10px;
+}
+.navbar-text {
+    margin-left: 15px;
+}
+.userimg {
+    width: 40px;
+    border: 2px solid #381F0B;
+    border-radius: 4px;
+    max-height: 40px;
+    margin: 1px;
+}
+  .sortorder:after {
+    content: '\25b2';
+    font-size: 9px;
+  }
+  .sortorder.reverse:after {
+    content: '\25bc';
+    font-size: 9px;
+  }
+
+h5 {
+    color: red;
+    border: 1px solid red;
+    margin: 5px auto;
+    padding: 10px 18px;
+    width: 310px;
+}
+.fcclogo {
+    width: 250px;
+}
+tr.top100, th {
+    font-size: 18px;
+}
+th {
+    background-color: #eef0ee;
+}
+th a, th a:hover {
+    color: #336033;
+}
+tr.top100 td {
+    vertical-align: middle;
+}
+td.count {
+    text-align: center;
+}
+.disclaimer {
+	 background-color
+    font-size: 14px;
+    border: 1px solid #aaa;
+    padding: 10px;
+}
+.lastchecked {
+    width: 5%;
+}
+.numbercol {
+    width: 10%;
+}
+.idcol {
+    width: 3%;
+}
+.single {
+	float: right;
+}
+.rank-btn.btn {
+    background-color: #ffac33;
+    background-image: linear-gradient(#ffcc4d, #ffac33);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffcc4d, endColorstr=#ffac33, GradientType=0)";
+    border-color: #f1a02a;
+    color: #292f33 !important;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+td.buttons.false, th.buttons.false {
+    width: 55px;
+}
+td.buttons.true, th.buttons.true {
+    width: 100px;
+}
+.buttons {
+    font-size:10px;
+}
+td.lastchecked {
+    font-size: 12px;
+}
+table.table-striped {
+	background-color: #f0f0f0;
+	color: #333;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-collapse: inherit;
+	border: 1px solid #351f0b;
+ }
+table.table-striped tr {
+	border: 0;
+ }
+
+#header {
+	background-color: #381F0B;
+	text-align: center;
+	border-color: #351f0b;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+#header h3 {
+	color: #f5f5f5;
+	margin: 0;
+	font-size: 25px;
+	font-weight: 300;
+}
+
+.right {
+    float: right;
+    margin-right: 20px;
+    margin-top: 3px;
+}
+.greeting {
+    font-size: 16px;
+    margin-top: 15px;
+}
+.btn-social.btn-lg :first-child {
+    line-height: 45px;
+    width: 45px;
+    font-size: 1.8em;
+}
+.btn-social > :first-child {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 32px;
+    line-height: 34px;
+    font-size: 1.6em;
+    text-align: center;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+.fa, [class^='ion-'] {
+    margin-right: 5px;
+}
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0, 0);
+}
+
+.btn-social.btn-lg {
+    padding-left: 61px;
+    padding-right: 12px;
+}
+.btn-social {
+    width: 250px;
+    margin: auto;
+}
+.btn {
+    font-weight: 400;
+}
+.btn-github {
+    color: #fff;
+    background-color: #444444;
+    border-color: rgba(200, 200, 200, 0.15);
+}
+.btn-social {
+    position: relative;
+    padding-left: 44px;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+.fa-github:before {
+    content: "\f09b";
+}
+*, *:before, *:after {
+    box-sizing: border-box !important;
+}
