@@ -382,27 +382,12 @@ angular.module( "fccuserlistApp", [ "ngCookies", "ngResource", "ngSanitize", "ng
 						"isLoggedIn() && isFollowing(camper.username)"><i class="glyphicon glyphicon-thumbs-down"></i></button></td>
 					</tr>
 
-
-					<tr>
-						<td colspan="10">
-							This list is assembled by taking a list of users from the <a href=
-							"https://gitter.im/FreeCodeCamp/FreeCodeCamp">FreeCodeCamp chat</a> and screen scraping <span ng-show=
-							"onRecentPage">recent activity</span>from the user\'s detail pages from the FreeCodeCamp site. This list is
-							updated every couple of days. It is not a realtime presentation of user scores on FreeCodeCamp.com.<br>
-							The list is ordered by descending total score. This score is calculated as <em>Points + (projects *
-							50)</em>.<br>
-							Take a look at the <span ng-show="onRecentPage"><a href="#" ng-click="getDataAlltime()">All Time
-							Leaderboard</a></span><span ng-hide="onRecentPage"><a href="#" ng-click="getDataRecent()">Recent activity
-							leaderboard</a></span>.
-						</td>
 					</tr>
 				</table>
 			</div>
 		</div>
 	</div>
-
-
 </body>
-</html>`
-		)
-	} ] );
+</html>`)
+	}]
+);
