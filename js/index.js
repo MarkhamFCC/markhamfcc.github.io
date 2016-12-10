@@ -184,7 +184,7 @@ var Footer = React.createClass({
       React.createElement("br", null),
       React.createElement(
         "footer",
-        { className: "well alert alert-success" },
+        { className: "well alert alert-success footer-stick" },
         React.createElement(
           "p",
           { className: "text-center" },
