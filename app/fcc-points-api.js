@@ -38,7 +38,7 @@ angular.module( "fccuserlistApp", [ "ngCookies", "ngResource", "ngSanitize", "ng
 				13 === c && a.getUserRanking()
 			}, a.getDataRecent = function() {
 				a.recentActivity = "recent activity from ", a.singleUser = void 0, a.onRecentPage = !0, a.showingFollowing = !1,
-					b.get( "/api/fccusers/top100/recent" )
+					b.get( "https://fcctop100.herokuapp.com/api/fccusers/top100/recent" )
 					.success( function( b ) {
 						a.reverse = !0, a.campers = b
 					} )
@@ -50,33 +50,33 @@ angular.module( "fccuserlistApp", [ "ngCookies", "ngResource", "ngSanitize", "ng
 					"totalRecent"
 			}, a.getDataFollowing = function() {
 				a.recentActivity = "recent activity from ", a.onRecentPage = !0, a.showingFollowing = !0, b.get(
-						"/api/fccusers/following/recent/" + a.me.username )
+						"https://fcctop100.herokuapp.com/api/fccusers/following/recent/" + a.me.username )
 					.success( function( b ) {
 						a.campers = b
 					} )
 			}, a.getDataAlltime = function() {
-				a.onRecentPage = !1, a.singleUser = void 0, a.showingFollowing = !1, b.get( "/api/fccusers/top100/alltime" )
+				a.onRecentPage = !1, a.singleUser = void 0, a.showingFollowing = !1, b.get( "https://fcctop100.herokuapp.com/api/fccusers/top100/alltime" )
 					.success( function( b ) {
 						a.reverse = !0, a.campers = b
 					} )
 			}, a.refreshUser = function( c ) {
-				b.get( "/api/fccusers/update/" + c )
+				b.get( "https://fcctop100.herokuapp.com/api/fccusers/update/" + c )
 					.success( function() {
 						setTimeout( function() {
 							a.onRecentPage ? a.getDataRecent() : a.getDataAlltime(), a.$apply()
 						}, 3e3 )
 					} )
 			}, a.followUser = function( c ) {
-				"input" === c ? b.get( "/api/fccusers/verify/username/" + a.username )
+				"input" === c ? b.get( "https://fcctop100.herokuapp.com/api/fccusers/verify/username/" + a.username )
 					.then( function( d ) {
 						var e = d.data;
-						c = e.username, b.put( "/api/fccusers/follow/" + a.me.username + "/" + c )
+						c = e.username, b.put( "https://fcctop100.herokuapp.com/api/fccusers/follow/" + a.me.username + "/" + c )
 							.success( function() {
 								a.getMe()
 							} )
 					}, function( b ) {
 						a.notFound = !0
-					} ) : ( a.notFound = !1, b.put( "/api/fccusers/follow/" + a.me.username + "/" + c )
+					} ) : ( a.notFound = !1, b.put( "https://fcctop100.herokuapp.com/api/fccusers/follow/" + a.me.username + "/" + c )
 						.success( function() {
 							a.getMe()
 						} ) )
@@ -87,7 +87,7 @@ angular.module( "fccuserlistApp", [ "ngCookies", "ngResource", "ngSanitize", "ng
 							a.campers.splice( d, 1 );
 							break
 						}
-				b.put( "/api/fccusers/unfollow/" + a.me.username + "/" + c )
+				b.put( "https://fcctop100.herokuapp.com/api/fccusers/unfollow/" + a.me.username + "/" + c )
 					.success( function() {
 						a.getMe()
 					} )
@@ -96,7 +96,7 @@ angular.module( "fccuserlistApp", [ "ngCookies", "ngResource", "ngSanitize", "ng
 			}, a.isNotFollowing = function( b ) {
 				return a.me && a.me.username !== b && a.me.following.indexOf( b ) < 0
 			}, a.getUserRanking = function() {
-				return a.username ? ( a.notFound = !1, void b.get( "/api/fccusers/ranking-" + ( a.onRecentPage ? "r" : "o" ) +
+				return a.username ? ( a.notFound = !1, void b.get( "https://fcctop100.herokuapp.com/api/fccusers/ranking-" + ( a.onRecentPage ? "r" : "o" ) +
 						"/" + a.username )
 					.then( function( b ) {
 						a.singleUser = b.data
@@ -113,7 +113,7 @@ angular.module( "fccuserlistApp", [ "ngCookies", "ngResource", "ngSanitize", "ng
 	} ] ), angular.module( "fccuserlistApp" )
 	.factory( "Auth", [ "$location", "$rootScope", "$http", "Fccuser", "$cookieStore", "$q", function( a, b, c, d, e, f ) {
 		var g = {};
-		return console.log( "Get token - Auth service" ), e.get( "token" ) && c.get( "/api/fccusers/me", function( a, b ) {
+		return console.log( "Get token - Auth service" ), e.get( "token" ) && c.get( "https://fcctop100.herokuapp.com/api/fccusers/me", function( a, b ) {
 			return a ? a : void( g = d.get() )
 		} ), {
 			login: function( a ) {
@@ -149,7 +149,7 @@ angular.module( "fccuserlistApp", [ "ngCookies", "ngResource", "ngSanitize", "ng
 		}
 	} ] ), angular.module( "fccuserlistApp" )
 	.factory( "Fccuser", [ "$resource", function( a ) {
-		return a( "/api/fccusers/:id", {
+		return a( "https://fcctop100.herokuapp.com/api/fccusers/:id", {
 			id: "@username"
 		}, {
 			get: {
