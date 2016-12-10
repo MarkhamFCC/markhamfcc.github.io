@@ -6,3 +6,4 @@ plugins/
 .DS_Store
 Thumbs.db
 /4me
+.private
