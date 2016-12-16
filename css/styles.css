@@ -1,0 +1,214 @@
+header {
+  background-image: url("https://s3.amazonaws.com/freecodecamp/freecodecamp_logo.svg");
+  background-repeat: no-repeat;
+  background-color: darkgreen;
+  background-position: center;
+  width: 100%;
+  height: 3em;
+  color: white;
+}
+
+leaderboard {
+  margin: 0 auto;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 100;
+  font-size: 18px;
+}
+
+.center-this, .text-center {
+  text-align: center;
+}
+
+table {
+  width: 90%;
+  margin: auto;
+  border-collapse: collapse;
+}
+table tr:nth-child(even) {
+  /* background: #eee; */
+}
+
+th {
+  min-width: 65px;
+  text-align: center;
+}
+
+tr {
+  height: 55px;
+}
+
+td {
+  vertical-align: middle;
+  /* min-width: 50px; */
+  text-align: center;
+  padding: 1em 0;
+  max-width: 100px;
+}
+
+#header {
+  background: #00987f;
+  color: white;
+  font-size: 1.1em;
+  height: 70px;
+}
+
+img {
+  max-width: 50px;
+  /* margin-left: 25px; */
+  vertical-align: middle;
+}
+img:hover {
+  -moz-transform: scale(3.5);
+  -webkit-transform: scale(3.5);
+  transform: scale(3.5);
+  border-radius: 100%;
+}
+
+a {
+  border-bottom: 2px solid white;
+  cursor: pointer;
+  color: #444;
+}
+a:hover {
+  opacity: 0.75;
+  color: #f22;
+}
+a.userNames {
+  border-bottom: 0px solid black;
+  cursor: pointer;
+  color: black;
+  text-decoration: none;
+}
+a.userNames:hover {
+  opacity: 0.75;
+  color: black;
+  border-bottom: 3px solid red;
+  font-size: 32px;
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/*.user:hover {
+ *  background-color: #black;      
+ *} */
+i {
+  padding-right: 10px;
+}
+
+a.fullOp {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  /* For IE8 and earlier */
+}
+
+/* Pulse */
+@-webkit-keyframes hvr-pulse {
+  25% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  75% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+@keyframes hvr-pulse {
+  25% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  75% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+.hvr-pulse {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+}
+.hvr-pulse:hover, .hvr-pulse:focus, .hvr-pulse:active {
+  -webkit-animation-name: hvr-pulse;
+  animation-name: hvr-pulse;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+table {
+  overflow: hidden;
+}
+
+tr:hover {
+  background-color: #50C9C3;
+}
+
+td, th {
+  position: relative;
+}
+
+td:hover {
+  -moz-box-shadow: inset 0 0 10px #000000;
+  -webkit-box-shadow: inset 0 0 10px #000000;
+  box-shadow: inset 0 0 10px #000000;
+}
+td:hover::after {
+  content: "";
+  position: absolute;
+  background-color: #96DEDA;
+  left: 0;
+  top: -5000px;
+  height: 10000px;
+  width: 100%;
+  z-index: -1;
+}
+
+th:hover::after {
+  content: "";
+  position: absolute;
+  background-color: #96DEDA;
+  left: 0;
+  top: -5000px;
+  height: 10000px;
+  width: 100%;
+  z-index: -1;
+}
+
+.gradeLogic {
+  background-size: 100%;
+  background-image: -webkit-linear-gradient(#F9D423, #FF4E50);
+  background-image: linear-gradient(#F9D423, #FF4E50);
+  position: relative;
+  z-index: 100;
+}
+.gradeLogic:before {
+  border-radius: inherit;
+  background-image: -webkit-linear-gradient(#FF4E50, #F9D423);
+  background-image: linear-gradient(#FF4E50, #F9D423);
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -100;
+  -webkit-transition: opacity 2.75s ease-in-out;
+  transition: opacity 2.75s ease-in-out;
+}
+.gradeLogic:hover:before {
+  opacity: 1;
+}
